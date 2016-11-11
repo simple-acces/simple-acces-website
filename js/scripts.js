@@ -1,6 +1,6 @@
 (function($) {
     "use strict";
-    
+
     /* -------------------
     Revolution Sliders
     ---------------------*/
@@ -46,37 +46,11 @@
         hideBulletsOnMobile: "off",
         hideArrowsOnMobile: "off"
     });
-    $('.tp-banner-video').show().revolution({
-        dottedOverlay: "none",
-        delay: 9000,
-        startheight: 700,
-        hideTimerBar: "on",
-        navigationType: "none",
-		  navigationStyle: "preview4",
-		  touchenabled: "on",
-		  swipe_velocity: 0.7,
-		  swipe_min_touches: 1,
-		  swipe_max_touches: 1,
-		  drag_block_vertical: false,
-	  	  keyboardNavigation: "on",
-		  fullScreen: "on",
-		  spinner: "spinner1",
-		  stopLoop: "off",
-		  stopAfterLoops: -1,
-	  	  stopAtSlide: -1,
-		  forceFullWidth: "off",
-		  fullScreenAlignForce: "off",
-		  minFullScreenHeight: "400",
-		  hideThumbsOnMobile: "off",
-		  hideNavDelayOnMobile: 1500,
-          hideBulletsOnMobile: "off",
-		  hideArrowsOnMobile: "off"
-    });
-    
+
     /* -------------------
     Owl Slider callings
     ---------------------*/
-    
+
     $("#client-slider").owlCarousel({
         autoPlay : true,
         minSlides: 1,
@@ -119,41 +93,24 @@
     Parallax Sections
     ---------------------*/
     if(!Modernizr.touch){
-        $('#home-parallax-fullscreen').parallax("50%", 0.5); 
-        $('#home-parallax-fullwidth').parallax("50%", 0.5); 
+        $('#home-parallax-fullscreen').parallax("50%", 0.5);
+        $('#home-parallax-fullwidth').parallax("50%", 0.5);
         $('.parallax-section-1').parallax("50%", 0.5);
         $('.parallax-section-2').parallax("50%", 0.5);
         $('.parallax-section-3').parallax("50%", 0.5);
         $('.parallax-section-4').parallax("50%", 0.5);
         $('.parallax-section-5').parallax("50%", 0.5);
         $('.parallax-section-6').parallax("50%", 0.5);
-        $('.parallax-section-7').parallax("50%", 0.5); 
-        $('.parallax-section-8').parallax("50%", 0.5); 
-        $('.parallax-section-9').parallax("50%", 0.5); 
+        $('.parallax-section-7').parallax("50%", 0.5);
+        $('.parallax-section-8').parallax("50%", 0.5);
+        $('.parallax-section-9').parallax("50%", 0.5);
         $('#home-landing').parallax("50%", 0.5);
-        
+
         /* -------------------
         Animation.css calling
         ---------------------*/
-        new WOW().init(); 
+        new WOW().init();
     }
-    /* -------------------
-    Google map
-    ---------------------*/
-    $("#map").gmap3({
-        marker:{     
-        address:"44 W 66th St, New York, NY", 
-        options:{ icon: "img/assets/marker.png"}},
-        map:{
-        options:{
-        styles: [ {
-        stylers: [ { "saturation":-90 }, { "lightness": 0 }, { "gamma": 0.0 }]},
-        ],
-        zoom: 13,
-        scrollwheel:false,
-        draggable: true }
-        }
-    });	
     /* -------------------
     Animated progress bars
     ---------------------*/
@@ -164,7 +121,7 @@
             },800);
         });
         }, { offset: '100%',
-             triggerOnce: true 
+             triggerOnce: true
     });
     /* -------------------
     Fun facts counter
@@ -185,34 +142,38 @@
     /* -------------------
     Scroll functions
     ---------------------*/
+    var backToTop = function() {
+        if($(window).scrollTop() > 400){
+            $("#back-to-top").stop().animate({ bottom:'16px' },300,'easeInOutCubic')
+        }
+        else{
+            $("#back-to-top").stop().animate({ bottom:'-50px' },300,'easeInOutCubic')
+        }
+    }
     $(window).scroll(function(){
         parallax();
         /* -------------------
         Header Animation
-        ---------------------*/
-        if ($(this).scrollTop() > 5){  
+        ---------------------
+        if ($(this).scrollTop() > 5){
             $('nav').addClass("navbar-small")
         }
         else{
             $('nav').removeClass("navbar-small")
-        }
+        }*/
         /* -------------------
         Back to top button popup
         ---------------------*/
-        if($(window).scrollTop() > 400){
-        $("#back-to-top").stop().animate({ bottom:'16px' },300,'easeInOutCubic')
-        } 
-        else{
-            $("#back-to-top").stop().animate({ bottom:'-50px' },300,'easeInOutCubic')
-        }
+        backToTop()
     });
+    backToTop()
     /* -------------------
     Preloader
     ---------------------*/
-    $(window).load(function(){ 
-        // Preloader 
+    $(window).load(function(){
+        // Preloader
         $('#loader').fadeOut('slow');
-        $('.spinner').fadeOut('slow'); 
+        $('.spinner').fadeOut('slow');
     }); // End Window Load
     /* -------------------
     Page Hero Parallax
@@ -221,8 +182,8 @@
         var scrolled = $(window).scrollTop();
         $('.hero').css('top',-(scrolled*0.0515)+'rem');
         $('.home-container').css('bottom',-(scrolled*0.0515)+'rem');
-        $('.op-1,.op-2,.op-3').css('opacity',1-(scrolled*.00110));            
-    }; 
+        $('.op-1,.op-2,.op-3').css('opacity',1-(scrolled*.00110));
+    };
     /* -------------------
     Smooth scrolling to anchor
     ---------------------*/
@@ -266,14 +227,14 @@
         if ($(window).width() <= 992) {
           $('.navbar-collapse a').on('click', function(){
               $('.navbar-collapse').collapse('hide')
-          }); 
+          });
         }
         else {
          $('.navbar .navbar-default a').off('click')
         }
     }
     close_toggle();
-    $(window).resize(close_toggle); 
+    $(window).resize(close_toggle);
     $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
     /* -------------------
     Contact form
@@ -324,7 +285,7 @@
                     if ( response.status == 'error' ) {
                         $alert.html( response.message );
                         $alert.addClass( 'alert-danger' ).fadeIn( 500 );
-                    } 
+                    }
                     else {
                         $el.trigger( 'reset' );
                         $alert.html( response.message );
@@ -338,7 +299,7 @@
     /* -------------------
     Bootstrap Tooltip, Alert, Tabs
     ---------------------*/
-    $(function () { $("[data-toggle='tooltip']").tooltip();  
+    $(function () { $("[data-toggle='tooltip']").tooltip();
         $(".alert").alert()
     });
     $(function () {
@@ -364,7 +325,7 @@
       e.preventDefault()
       $(this).tab('show')
     })
-    
+
 })(jQuery);
 
 
@@ -373,7 +334,7 @@ Portfolio
  ---------------------*/
 (function($, window, document, undefined) {
     "use strict";
-    
+
     var gridContainer = $('#grid-container-fullwidth'),
         filtersContainer = $('#filters-container-fullwidth'),
         wrap, filtersCallback;
@@ -511,4 +472,86 @@ Portfolio
             // error
         });
     });
+
+    window.octoboot_before_save = function(done) {
+        window.scrollTo(0,0)
+        $('*.animated').removeClass('animated')
+        setTimeout(done, 1000)
+    }
+
+    // ANIM INTRO
+   var canvas = document.querySelector("#canvas_intro")
+   canvas.width = window.innerWidth
+   canvas.height = window.innerHeight
+
+   var context = canvas.getContext("2d"),
+       width = window.innerWidth,
+       height = canvas.height;
+
+   var isocontext = isometric(context);
+   isocontext.scale3d(30, 30, 30);
+   var num = Math.ceil((window.innerWidth * 10) / 960)
+   var delay = Math.ceil((window.innerWidth * 3.3) / 960)
+
+   if (window.top === window) {
+       var animTimer = d3_timer.timer(function(elapsed) {
+         context.save();
+         context.clearRect(0, 0, width, height);
+         context.fillStyle = "#0098b0";
+         context.translate(width / 2, height * 0.6);
+         for (var x = num, d, t = (elapsed / 5000) % 1; x >= -num; --x) {
+           for (var y = num; y >= -num; --y) {
+             if ((d = distanceManhattan(x, y)) > num) continue;
+             var te = d3_ease.easeCubic(Math.max(0, Math.min(1, t * delay - distanceCartesian(x, y) / 4)));
+             drawCube((d & 1 ? -1 : +1) * (Math.PI / 4 - te * Math.PI / 2), x * 2, y * 2, 2 * te);
+           }
+         }
+         // stop anim after one rotation
+         if ((elapsed / 5000) >= 1) {
+            animTimer.stop()
+         }
+         context.restore();
+       });
+   }
+
+   function distanceCartesian(x, y) {
+     return Math.sqrt(x * x + y * y);
+   }
+
+   function distanceManhattan(x, y) {
+     return Math.abs(x) + Math.abs(y);
+   }
+
+   function drawCube(angle, x, y, z) {
+     if ((angle %= Math.PI / 2) < 0) angle += Math.PI / 2;
+
+     isocontext.save();
+     isocontext.translate3d(x, y, z);
+     isocontext.rotateZ(angle - Math.PI / 4);
+
+     context.beginPath();
+     isocontext.moveTo(+0.5, -0.5, +0.5);
+     isocontext.lineTo(+0.5, +0.5, +0.5);
+     isocontext.lineTo(-0.5, +0.5, +0.5);
+     isocontext.lineTo(-0.5, +0.5, -0.5);
+     isocontext.lineTo(-0.5, -0.5, -0.5);
+     isocontext.lineTo(+0.5, -0.5, -0.5);
+     isocontext.closePath();
+     context.fill();
+     context.lineWidth = 1.5;
+     context.strokeStyle = "#c1c1c1"
+     context.stroke();
+
+     context.beginPath();
+     isocontext.moveTo(-0.5, -0.5, +0.5);
+     isocontext.lineTo(+0.5, -0.5, +0.5);
+     isocontext.moveTo(-0.5, -0.5, +0.5);
+     isocontext.lineTo(-0.5, +0.5, +0.5);
+     isocontext.moveTo(-0.5, -0.5, +0.5);
+     isocontext.lineTo(-0.5, -0.5, -0.5);
+     context.lineWidth = 0.75;
+     context.stroke();
+
+     isocontext.restore();
+   }
 })(jQuery, window, document);
