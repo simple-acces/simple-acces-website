@@ -480,6 +480,9 @@ Portfolio
         $('.parallax').each(function(i, e) {
             e.style = ""
         })
+        $('.wow.fadeInUp').each(function(i, e) {
+            e.style = ""
+        })
         setTimeout(done, 500)
     }
 
