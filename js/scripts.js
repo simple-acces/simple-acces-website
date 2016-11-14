@@ -477,7 +477,10 @@ Portfolio
         window.scrollTo(0,0)
         $('*.animated').removeClass('animated')
         $('html').get(0).className = ""
-        setTimeout(done, 1000)
+        $('.parallax').each(function(i, e) {
+            e.style = ""
+        })
+        setTimeout(done, 500)
     }
 
     // ANIM INTRO
