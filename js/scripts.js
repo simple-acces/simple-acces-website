@@ -476,6 +476,7 @@ Portfolio
     window.octoboot_before_save = function(done) {
         window.scrollTo(0,0)
         $('*.animated').removeClass('animated')
+        $('html').get(0).className = ""
         setTimeout(done, 1000)
     }
 
