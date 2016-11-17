@@ -84,7 +84,7 @@ a:focus, a:active, button::-moz-focus-inner, input[type="reset"]::-moz-focus-inn
     border: 0;
     outline : 0;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
     .container {
         max-width: 1425px;
         width: 100%;
@@ -137,7 +137,7 @@ p {
     font-size: 30px;
 }
 .subheading {
-    font-size: 14px;
+    font-size: 22px;
     line-height: 20px;
     font-weight: 400;
     margin-bottom: 42px;
@@ -171,16 +171,38 @@ p {
     margin-bottom: 10px;
     font-size: 50px;
 }
+.subtitle {
+    font-size: 18px
+}
 @media (max-width:600px) {
-    .project-title {
-        font-size: 24px;
+    p.desc {
+        max-width: 80%;
+        margin: 0 auto 10px auto !important;
+        text-align: justify;
+    }
+    .project-title, .section-title {
+        font-size: 20px !important;
+    }
+    .subheading {
+        font-size: 16px !important;
     }
 
    .responsive-img {
-    width: 100%;
-    padding-bottom: 20px;
+       width: 100%;
+       padding-bottom: 20px;
     }
+}
 
+@media (max-width:360px) {
+    .project-title-big, .section-title-big {
+        font-size: 18px !important;
+    }
+    .subheading-big {
+        font-size: 14px !important;
+    }
+    .subtitle {
+        font-size: 14px !important;
+    }
 }
 @media (min-width:768px) {
    .responsive-img {
@@ -958,7 +980,7 @@ nav {
 
 
 /*Navbar Collapse*/
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
     .navbar-default .navbar-collapse {
         margin-top: 18px;
         padding-right: 0px;
@@ -1108,7 +1130,7 @@ nav {
 }
 
 /*Dropdown*/
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
     .navbar-small .dropdown {
         margin-top: .49999999px;
     }
@@ -2013,14 +2035,16 @@ blockquote strong {
 }
 
 /*----- Price List -----*/
+@media (min-width:992px) {
+    .col-md-15 {
+        width: 20%;
+    }
+}
+
 #price-list {
     padding-bottom: 75px;
 }
-@media (max-width:992px) {
-    #price-list {
-        display: none;
-    }
-}
+
 .price-list-box {
     padding-left: 7px;
     padding-right: 7px;
@@ -2823,8 +2847,19 @@ footer a:hover {
 /*----- Shortcodes -----*/
 
 /*-- Buttons --*/
+@media (max-width: 600px) {
+    .btn, .btn-primary {
+        font-size: 11px !important;
+    }
+}
+@media (max-width: 360px) {
+    .btn, .btn-primary {
+        font-size: 10px !important;
+        padding: 6px 8px !important;
+    }
+}
 .btn-primary {
-
+    max-width: 100%;
     margin-top: 24px;
     text-transform: uppercase;
     -webkit-transition: all ease .3s;
@@ -3734,7 +3769,6 @@ pre {
 }
 .pricing_table .planbox ul {
 	float: left;
-	width: 100%;
 	padding: 0px;
 	margin: 0px 0px 20px 0px;
    list-style:none;

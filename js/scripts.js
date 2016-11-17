@@ -497,8 +497,8 @@ Portfolio
 
    var isocontext = isometric(context);
    isocontext.scale3d(30, 30, 30);
-   var num = Math.ceil((window.innerWidth * 10) / 960)
-   var delay = Math.ceil((window.innerWidth * 3.3) / 960)
+   var num = Math.ceil((window.innerWidth * 10) / Math.min(window.innerWidth,960))
+   var delay = Math.ceil((window.innerWidth * 3.3) / Math.min(window.innerWidth,960))
 
    if (window.top === window) {
        var animTimer = d3_timer.timer(function(elapsed) {
