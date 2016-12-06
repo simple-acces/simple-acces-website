@@ -483,6 +483,7 @@ Portfolio
         $('.wow.fadeInUp').each(function(i, e) {
             e.style = ""
         })
+        $('#loader, .spinner').css('display', 'block')
         setTimeout(done, 500)
     }
 
