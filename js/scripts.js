@@ -240,7 +240,7 @@
     Contact form
     ---------------------*/
     $('#contactform').submit(function(){
-		var action = $(this).attr('action');
+		var action = $(this).attr('data-action');
 		$("#message").slideUp(250,function() {
 
             if ($('#username').val()) {
