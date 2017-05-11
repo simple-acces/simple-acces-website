@@ -242,10 +242,18 @@
     $('#contactform').submit(function(){
 		var action = $(this).attr('action');
 		$("#message").slideUp(250,function() {
+
+            if ($('#username').val()) {
+                $('#message').html('sorry mister robot !!!');
+                $('#message').slideDown(250);
+                return
+            }
             $('#message').hide();
+
             $('#submit')
                 .after('<img src="img/assets/contact-form-loader.gif" class="loader" />')
                 .attr('disabled','disabled');
+
             $.post(action, {
                 name: $('#name').val(),
                 email: $('#email').val(),
