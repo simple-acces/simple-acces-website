@@ -492,6 +492,7 @@ Portfolio
             e.style = ""
         })
         $('#loader, .spinner').css('display', 'block')
+        $('.g-recaptcha').html('')
         setTimeout(done, 500)
     }
 
