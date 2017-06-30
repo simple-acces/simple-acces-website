@@ -259,6 +259,7 @@
                 email: $('#email').val(),
                 subject: $('#subject').val(),
                 comments: $('#comments').val(),
+                'g-recaptcha-response': $('#g-recaptcha-response').val()
             },
                 function(data){
                     document.getElementById('message').innerHTML = data;
