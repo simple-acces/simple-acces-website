@@ -3796,3 +3796,15 @@ pre {
 	display: block;
 	margin: -22px auto 0 auto;
 }
+
+a.fa.fa-angle-down {
+    padding: 10px 15px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
