@@ -3818,6 +3818,7 @@ a.fa.fa-angle-down {
 .pack-comm-container .panel {
     width: 40%;
     min-width: 300px;
+    margin-top: 5%;
 }
 
 .pack-comm-container i {
