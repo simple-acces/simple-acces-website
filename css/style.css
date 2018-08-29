@@ -3808,3 +3808,53 @@ a.fa.fa-angle-down {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
+
+.pack-comm-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pack-comm-container .panel {
+    width: 40%;
+    min-width: 300px;
+}
+
+.pack-comm-container i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #89bdd3;
+    background: none;
+    font-size: 35px;
+    line-height: 30px;
+}
+
+.pack-comm-container h2 {
+    padding: 15px 0 15px 0;
+    margin: -10px 0;
+    line-height: 55px;
+    font-size: 30px;
+    word-spacing: 3px;
+}
+
+.pack-comm-container h4 {
+    font-size: 18px;
+}
+
+.pack-comm-container h2, .pack-comm-container h4 {
+    display: inline;
+}
+
+.price {
+    line-height: 30px;
+    border-bottom: 1px dotted #89bdd3;
+}
+
+.clearfix {
+    display: block;
+}
+
+.pack-comm-container .panel-body {
+    background-color: #fbfbfb;
+}
