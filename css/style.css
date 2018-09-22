@@ -3867,3 +3867,87 @@ a.fa.fa-angle-down {
 th {
     text-align: unset;
 }
+section#three {
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+section#three .ui.grid {
+    padding: 0 2%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+section#three .column {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+section#three .column img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+section#three .realisation .over {
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.7em;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+section#three .realisation .over span {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+section#three .realisation .over .divider {
+    width: 15px;
+    margin: 15px auto;
+}
+
+section#three .realisation:hover .over {
+    opacity: 1;
+}
+
+section#three .realisation:hover img {
+    transform: scale(1.1);
+}
+
+section#three .column .realisation {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+@media only screen and (max-width: 960px) {
+
+    section#three .realisation .over {
+        top: 50%;
+        opacity: 1;
+    }
+
+    section#three .realisation {
+        position: relative;
+    }
+
+    section#three .realisation img {
+        max-width: 100%;
+    }
+}
+
