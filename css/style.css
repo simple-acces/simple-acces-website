@@ -3869,3 +3869,112 @@ th {
 }
 
 
+/* PORTFOLIO */
+
+section#three .ui.grid {
+    padding: 0 2%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+section#three .column {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+section#three .column .realisation {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+section#three .column img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+section#three .realisation:hover img {
+    transform: scale(1.1);
+}
+
+section#three .realisation:hover .over {
+    opacity: 1;
+}
+
+section#three {
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+section#three .realisation .over {
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.7em;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui.grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.ui.grid>.column:not(.row), .ui.grid>.row>.column {
+    position: relative;
+    display: inline-block;
+    width: 6.25%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: top;
+}
+
+.ui.grid>.column:not(.row) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ui.grid>[class*="five wide"].column {
+    width: 31.25%!important;
+}
+
+.ui.grid>[class*="six wide"].column {
+    width: 37.5%!important;
+}
+
+section#three .realisation .over .divider {
+    width: 15px;
+    margin: 15px auto;
+}
+
+.divider {
+    height: 4px;
+    background: #0093b1;
+    width: 30px;
+    margin: 35px auto;
+}
+
