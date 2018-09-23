@@ -3942,6 +3942,7 @@ section#three .realisation .over {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    justify-content: center;
 }
 
 .ui.grid>.column:not(.row), .ui.grid>.row>.column {
