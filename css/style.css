@@ -3979,3 +3979,9 @@ section#portfolio .realisation .over .divider {
     margin: 35px auto;
 }
 
+@media (max-width: 992px) {
+    .site-wrapper.content {
+        padding: 0 20px;
+    }
+}
+
