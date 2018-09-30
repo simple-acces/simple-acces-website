@@ -150,7 +150,8 @@
             $("#back-to-top").stop().animate({ bottom:'-50px' },300,'easeInOutCubic')
         }
     }
-    $(window).scroll(function(){
+
+    var scrollP = function() {
         parallax();
         /* -------------------
         Header Animation
@@ -165,7 +166,9 @@
         Back to top button popup
         ---------------------*/
         backToTop()
-    });
+        window.requestAnimationFrame(scrollP)
+    };
+    window.requestAnimationFrame(scrollP)
     backToTop()
     /* -------------------
     Preloader
