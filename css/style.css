@@ -3983,5 +3983,36 @@ section#portfolio .realisation .over .divider {
     .site-wrapper.content {
         padding: 0 20px;
     }
+
+    .table.desktop {
+        display: none !important;
+    }
+
+    .table.mobile {
+        display: block !important;
+    }
 }
 
+.table.mobile {
+    /*display: none;*/
+    max-width: 100%;
+}
+
+.table.mobile .offer {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px dotted #dedada;
+}
+
+.table.mobile header {
+    color: white;
+    font-size: 24px;
+    background: #0098b0;
+    font-weight: 700;
+}
+
+.table.mobile .desc {
+    padding-right: 10px;
+}
