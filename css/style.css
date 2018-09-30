@@ -3993,6 +3993,12 @@ section#portfolio .realisation .over .divider {
     }
 }
 
+@media (max-width: 620px) {
+    section#portfolio .column {
+        width: 100% !important;
+    }
+}
+
 .table.mobile {
     display: none;
     max-width: 100%;
