@@ -4003,6 +4003,7 @@ section#portfolio .realisation .over .divider {
     align-items: center;
     margin-top: 5px;
     padding: 10px;
+    justify-content: center;
     border: 1px dotted #dedada;
 }
 
