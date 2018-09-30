@@ -3994,7 +3994,7 @@ section#portfolio .realisation .over .divider {
 }
 
 .table.mobile {
-    /*display: none;*/
+    display: none;
     max-width: 100%;
 }
 
