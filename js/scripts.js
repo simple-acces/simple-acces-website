@@ -500,6 +500,7 @@ Portfolio
         $('script[src*="gstatic.com/recaptcha"]').remove()
         $('script[src*="google-analytics.com/analytics.js"]').remove()
         $('.g-recaptcha-bubble-arrow').parent().remove()
+        $('iframe[title~=recaptcha]').parent('div').parent('div').remove()
         setTimeout(done, 500)
     }
 
