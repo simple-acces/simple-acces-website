@@ -142,8 +142,8 @@
     /* -------------------
     Scroll functions
     ---------------------*/
-    var backToTop = function() {
-        if($(window).scrollTop() > 400){
+    var backToTop = function (scrollTop) {
+        if (scrollTop > 400){
             $("#back-to-top").stop().animate({ bottom:'16px' },300,'easeInOutCubic')
         }
         else{
@@ -152,7 +152,8 @@
     }
 
     var scrollP = function() {
-        parallax();
+        var scrollTop = $(window).scrollTop()
+        //parallax(scrollTop);
         /* -------------------
         Header Animation
         ---------------------
@@ -165,7 +166,7 @@
         /* -------------------
         Back to top button popup
         ---------------------*/
-        backToTop()
+        backToTop(scrollTop)
         window.requestAnimationFrame(scrollP)
     };
     window.requestAnimationFrame(scrollP)
@@ -181,11 +182,10 @@
     /* -------------------
     Page Hero Parallax
     ---------------------*/
-    function parallax(){
-        var scrolled = $(window).scrollTop();
-        $('.hero').css('top',-(scrolled*0.0515)+'rem');
-        $('.home-container').css('bottom',-(scrolled*0.0515)+'rem');
-        $('.op-1,.op-2,.op-3').css('opacity',1-(scrolled*.00110));
+    function parallax(scrollTop){
+        $('.hero').css('top', -(scrollTop*0.0515)+'rem');
+        $('.home-container').css('bottom', -(scrollTop*0.0515)+'rem');
+        $('.op-1,.op-2,.op-3').css('opacity', 1 - (scrollTop*.00110));
     };
     /* -------------------
     Smooth scrolling to anchor
@@ -210,7 +210,7 @@
     var sections = $('section')
     , nav = $('nav')
     , nav_height = nav.outerHeight();
-    $(window).on('scroll', function () {
+    $(window).on('scroll', setTimeout(function () {
       var cur_pos = $(this).scrollTop();
       sections.each(function() {
         var top = $(this).offset().top - nav_height,
@@ -222,7 +222,7 @@
           nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('current');
         }
       });
-    });
+    }));
     /* -------------------
     Auto-close responsive navbar
     ---------------------*/
