@@ -177,7 +177,7 @@
     $(window).load(function(){
         // Preloader
         $('#loader').fadeOut('slow');
-        $('.spinner').fadeOut('slow');
+        //$('.spinner').fadeOut('slow');
     }); // End Window Load
     /* -------------------
     Page Hero Parallax
@@ -210,7 +210,7 @@
     var sections = $('section')
     , nav = $('nav')
     , nav_height = nav.outerHeight();
-    $(window).on('scroll', setTimeout(function () {
+    $(window).on('scroll', function () {
       var cur_pos = $(this).scrollTop();
       sections.each(function() {
         var top = $(this).offset().top - nav_height,
@@ -222,7 +222,7 @@
           nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('current');
         }
       });
-    }));
+    });
     /* -------------------
     Auto-close responsive navbar
     ---------------------*/
